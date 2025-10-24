@@ -4,30 +4,28 @@ import { Bot, MessageCircle, Target, Brain } from "lucide-react";
 
 const stats = [
   {
-    icon: <Bot className="w-10 h-10 text-white" />,
+    icon: <Bot className="w-10 h-10 text-blue-600" />,
     title: "🤖 Adaptive Learning",
     description:
       "Our AI studies your progress and tailors each quiz to your level — smarter practice, faster improvement.",
-    bg: "bg-blue-600 hover:bg-blue-700",
   },
   {
-    icon: <MessageCircle className="w-10 h-10 text-white" />,
+    icon: <MessageCircle className="w-10 h-10 text-green-600" />,
     title: "💬 AI Doubt Solver",
-    description: "Got stuck? Ask your AI assistant to explain concepts instantly.",
-    bg: "bg-green-600 hover:bg-green-700",
+    description:
+      "Got stuck? Ask your AI assistant to explain concepts instantly.",
   },
   {
-    icon: <Target className="w-10 h-10 text-white" />,
+    icon: <Target className="w-10 h-10 text-yellow-600" />,
     title: "🎯 AI Recommendations",
     description:
       "Get personalized tips on weaker topics, best chapters to focus on, and how to improve your overall rank.",
-    bg: "bg-yellow-500 hover:bg-yellow-600",
   },
   {
-    icon: <Brain className="w-10 h-10 text-white" />,
+    icon: <Brain className="w-10 h-10 text-red-600" />,
     title: "⚡ Smart Progress",
-    description: "Track your learning curve and stay motivated with visual progress updates.",
-    bg: "bg-red-500 hover:bg-red-600",
+    description:
+      "Track your learning curve and stay motivated with visual progress updates.",
   },
 ];
 
@@ -62,11 +60,11 @@ const StatsSection: React.FC = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className={`${stat.bg} rounded-2xl p-6 flex flex-col items-start space-y-4 shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1 text-white`}
+                  className="bg-white rounded-2xl p-6 flex flex-col items-start space-y-4 shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1 border border-gray-100"
                 >
-                  <div className="p-3 rounded-full bg-white/20">{stat.icon}</div>
-                  <h3 className="text-xl font-semibold">{stat.title}</h3>
-                  <p className="leading-relaxed opacity-90">{stat.description}</p>
+                  <div className="p-3 rounded-full bg-gray-100">{stat.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900">{stat.title}</h3>
+                  <p className="text-gray-600 text-left leading-relaxed">{stat.description}</p>
                 </div>
               ))}
             </div>

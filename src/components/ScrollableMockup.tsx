@@ -12,7 +12,7 @@ const ScrollableMockup = ({ imageUrl, alt, className = "" }: ScrollableMockupPro
   return (
     <div className={`relative ${className}`}>
       {/* iPhone 16 Pro Max Frame with 3D effects */}
-      <div className="relative w-[230px] h-[450px]  md:w-[250px] md:h-[550px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl border-[6px] border-gray-700 transform perspective-1000 rotate-y-[-5deg] rotate-x-[5deg] hover:rotate-y-[-8deg] hover:rotate-x-[8deg] transition-all duration-500">
+      <div className="relative w-[230px] h-[450px] md:mt-36  md:w-[280px] md:h-[590px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl border-[6px] border-gray-700 transform perspective-1000 rotate-y-[-5deg] rotate-x-[5deg] hover:rotate-y-[-8deg] hover:rotate-x-[8deg] transition-all duration-500">
         {/* 3D depth effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-800 rounded-[3rem] transform translate-z-[-10px]"></div>
         

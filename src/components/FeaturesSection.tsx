@@ -59,9 +59,7 @@ const FeaturesSection = () => {
     <section id="features" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-sm text-muted-foreground uppercase tracking-wider mb-4">
-            YOUR LEARNING APP
-          </p>
+         
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Explore Powerful Quiz Modes
           </h2>

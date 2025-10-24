@@ -1,14 +1,33 @@
 "use client";
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Apple, Play, Heart, Share2, MessageCircle, MoreHorizontal, Zap, Clock, Square } from "lucide-react";
 import { motion } from "framer-motion";
 
 const HeroSection: FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const backgroundImages = [
+    '/boy1.jpg',
+    '/boy2.jpg',
+    '/boy3.jpg'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="relative bg-[#111111] text-white overflow-hidden min-h-screen">
+    <section 
+      className="relative bd-right  md:bg-cover  md:bg-right text-white overflow-hidden min-h-screen transition-all duration-1000 ease-in-out"
+      style={{ backgroundImage: `url('${backgroundImages[currentImageIndex]}')` }}
+    >
       {/* ---------- MAIN CONTAINER ---------- */}
-      <div className="container mx-auto px-16 py-36 mt-[-60px] md:py-32 md:mt-[-60px] grid md:grid-cols-2 gap-12 items-center min-h-screen">
+      <div className="container mx-auto md:px-16 py-36 mt-[-60px] md:py-32 md:mt-[-60px] grid md:grid-cols-2 gap-12 items-center min-h-screen">
 
         {/* ---------- LEFT CONTENT ---------- */}
         <div className="text-center md:text-left space-y-6 ">
@@ -16,7 +35,7 @@ const HeroSection: FC = () => {
             OPEN MCQ - Your Smart MCQ Quiz Buddy
           </h1>
 
-          <p className="text-gray-300 text-lg max-w-md mx-auto p-2  md:mx-0">
+          <p className="text-gray-100 text-lg max-w-md mx-auto p-2  md:mx-0">
             Ace your exams with confidence!
             From CBSE 10th & 12th to NEET and JEE, Open Mcq makes learning fun, fast, and focused
             — powered by smart AI that knows exactly how you learn best.
@@ -29,7 +48,7 @@ const HeroSection: FC = () => {
             <Button
               variant="default"
               size="lg"
-              className="bg-white text-black hover:bg-gray-800 flex items-center font-bold gap-2  rounded-lg"
+              className="bg-white text-black hover:bg-gray-300 flex items-center font-bold gap-2  rounded-lg"
             >
               <img src="/logo-apple.png" className="w-5 h-5" />
               APP STORE
@@ -38,7 +57,7 @@ const HeroSection: FC = () => {
             <Button
               variant="default"
               size="lg"
-              className="bg-white text-black hover:bg-gray-800 flex items-center gap-2  font-bold rounded-lg"
+              className="bg-white text-black hover:bg-gray-300 flex items-center gap-2  font-bold rounded-lg"
             >
               <img src="/logo-google.png" className="w-5 h-5" />
               GOOGLE PLAY
@@ -74,7 +93,7 @@ const HeroSection: FC = () => {
       </div>
 
       {/* ---------- WHITE CARD BELOW ---------- */}
-      <div className="absolute bottom-0 left-0 right-0 bg-white text-black  md:py-45 px-6 md:px-12 rounded-t-3xl shadow-lg">
+      <div className="absolute  py-3 bottom-0 left-0 right-0 bg-white text-black  md:py-45 px-6 md:px-12 rounded-t-3xl shadow-lg">
         <div className="max-w-6xl mx-auto md:mt-10 mt-3 space-y-2">
           <h2 className="text-2xl font-semibold">Why Open Mcq ?</h2>
           <p className="text-gray-500 text-base md:text-lg leading-relaxed">

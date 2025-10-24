@@ -7,7 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-hero text-hero-foreground border-b border-gray-800">
+    <header className="sticky top-0 z-50 text-hero-foreground bg-black/65 backdrop-blur-md border-gray-300/40">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -52,7 +52,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 space-y-4 border-t border-gray-800">
+          <nav className="md:hidden py-4 space-y-4  border-gray-300/40">
             <Link to="/" className="block py-2 hover:text-primary transition-colors">
               Home
             </Link>

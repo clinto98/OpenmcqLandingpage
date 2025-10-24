@@ -72,7 +72,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center mt-12 pt-8 border-t border-gray-800">
           <p className="text-sm text-gray-500">
-            © 2025 Micheal Salehnan, All rights reserved. Designed by ThemeWagon
+            © 2025 Finlytyx AI Labs, All rights reserved.
           </p>
         </div>
       </div>
