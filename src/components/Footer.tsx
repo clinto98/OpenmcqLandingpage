@@ -53,7 +53,7 @@ const Footer = () => {
             <a href="#" className="text-gray-400 hover:text-white transition-colors">
               Pricing
             </a>
-            <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+            <a href="/privacypolicy" className="text-gray-400 hover:text-white transition-colors">
               Privacy Policy
             </a>
           </nav>
