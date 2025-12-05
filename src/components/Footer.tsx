@@ -54,7 +54,7 @@ const Footer = () => {
               Pricing
             </a>
             <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
-              Privacy and Policy
+              Privacy Policy
             </a>
           </nav>
 
